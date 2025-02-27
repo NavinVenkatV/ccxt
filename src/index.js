@@ -199,21 +199,21 @@ async function BTCTRades(){
     const sellers = trades.filter(trade => trade.side === "sell");
     const buyers  = trades.filter(trade => trade.side === "buy");
     //If the bitcoin price is 'price = 86263.72' and the amount of bitcoin user sells is 'amount = 0.0015' and the total cost user get is price * amount\
-    // console.log("----------Seller Details--------")
-    // sellers.forEach(info => {
-    //     console.log("Price of 1 BTC:", info.price);
-    //     console.log("Amount of Bitcoin sold:", info.amount);
-    //     console.log("Total cost of seller (USDT):", info.cost.toFixed(2));
-    //     console.log("----------------------------");
-    // });
-
-    console.log("xxx Buyer Details xxx")
-    buyers.forEach(info =>{
+    console.log("----------Seller Details--------")
+    sellers.forEach(info => {
         console.log("Price of 1 BTC:", info.price);
-        console.log("Amount of Bitcoin Bought:", info.amount);
-        console.log("Total cost (USDT):", info.cost.toFixed(2));
+        console.log("Amount of Bitcoin sold:", info.amount);
+        console.log("Total cost of seller (USDT):", info.cost.toFixed(2));
         console.log("----------------------------");
-    })
+    });
+
+    // console.log("xxx Buyer Details xxx")
+    // buyers.forEach(info =>{
+    //     console.log("Price of 1 BTC:", info.price);
+    //     console.log("Amount of Bitcoin Bought:", info.amount);
+    //     console.log("Total cost (USDT):", info.cost.toFixed(2));
+    //     console.log("----------------------------");
+    // })
 }
 
 async function SLNTrades(){
